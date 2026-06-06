@@ -45,9 +45,7 @@ A Zoom Enterprise Application was added to Microsoft Entra ID.
 
 The **Assignment Required** setting was enabled to ensure only explicitly assigned users could access the application.
 
-![Zoom Application](screenshots/01-zoom-app-created.png)
 
-![Assignment Required](screenshots/02-assignment-required.png)
 
 ## Licensing Limitation Encountered
 
@@ -71,7 +69,7 @@ PASS
 
 Test User 1 successfully authenticated and accessed the application.
 
-![Authorized User](screenshots/03-user1-access-granted.png)
+
 
 ### Test 2 – Unauthorized User Access
 
@@ -83,13 +81,13 @@ PASS
 
 Test User 3 could not view the Zoom application.
 
-![Unauthorized User](screenshots/04-user3-access-denied.png)
+
 
 ## Sign-In Log Review
 
 After access testing, Entra sign-in logs were reviewed to validate authentication activity.
 
-![Sign-In Logs](screenshots/05-sign-in-logs.png)
+
 
 ## IAM Concepts Demonstrated
 

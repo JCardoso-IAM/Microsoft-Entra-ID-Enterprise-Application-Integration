@@ -42,7 +42,7 @@ The IAM team is responsible for:
 ### Application Configuration
 
 A Zoom Enterprise Application was added to Microsoft Entra ID.
-![Zoom Enterprise App Creation](ZoomEnterpriseappCreation.png)
+![Zoom Enterprise App Creation](Zoom%20Enterprise%20app%20creation%20.png)
 
 The **Assignment Required** setting was enabled to ensure only explicitly assigned users could access the application.
 ![Zoom Properties](ZoomProperties.png)

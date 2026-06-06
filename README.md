@@ -45,7 +45,7 @@ A Zoom Enterprise Application was added to Microsoft Entra ID.
 ![Zoom Enterprise App Creation](ZoomEnterpriseappCreation.png)
 
 The **Assignment Required** setting was enabled to ensure only explicitly assigned users could access the application.
-
+![Zoom Properties](ZoomProperties.png)
 
 
 ## Licensing Limitation Encountered

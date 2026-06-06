@@ -1,63 +1,116 @@
-# Microsoft-Entra-ID-Enterprise-Application-Integration
-Simulating Enterprise SaaS application onboarding and access control using Entra ID.
+# Enterprise SaaS Application Access Management Lab (Microsoft Entra ID)
+
 ## Overview
+
 This lab demonstrates how Microsoft Entra ID can be used to onboard and manage access to a Software-as-a-Service (SaaS) application while enforcing authorization controls through user assignments.
 
-The objective was to simulate a real-world IAM scenario where users require access to a business application while maintaining least privilege principles and proper access governance.
-## Business Scenario 
+## Business Scenario
+
 An organization is deploying Zoom as a SaaS application for employees.
 
 The IAM team is responsible for:
 
-Onboarding the application into Microsoft Entra ID
-Controlling which users can access the application
-Enforcing authorization through application assignments
-Validating user access
-Reviewing authentication activity through sign-in logs
-
-To accomplish this, a Zoom Enterprise Application was configured within Microsoft Entra ID and access was granted only to approved users.
+- Onboarding the application into Microsoft Entra ID
+- Controlling which users can access the application
+- Enforcing authorization through application assignments
+- Validating user access
+- Reviewing authentication activity through sign-in logs
 
 ## Technologies Used
-Microsoft Entra ID
-Zoom Enterprise Application
-Enterprise Applications
-User Assignments
-My Apps Portal
-Entra Sign-In Logs
 
-## Security Groups Created
-Zoom Users 
-Zoom Administrators 
+- Microsoft Entra ID
+- Zoom Enterprise Application
+- Enterprise Applications
+- My Apps Portal
+- Entra Sign-In Logs
 
-## Application Configuration 
+## Lab Configuration
+
+### Users Created
+
+| User | Purpose |
+|--------|--------|
+| Test User 1 | Authorized User |
+| Test User 2 | Authorized User |
+| Test User 3 | Unauthorized User |
+
+### Security Groups Created
+
+- Zoom Users
+- Zoom Administrators
+
+### Application Configuration
+
 A Zoom Enterprise Application was added to Microsoft Entra ID.
 
-The Assignment Required setting was enabled to ensure only explicitly assigned users could access the application.
+The **Assignment Required** setting was enabled to ensure only explicitly assigned users could access the application.
 
-## Licensing Limitation Encountered 
-While performing the lab, a limitation of Microsoft Entra ID Free was identified.
+![Zoom Application](screenshots/01-zoom-app-created.png)
 
-Group-based application assignments require a premium license and therefore could not be utilized.
+![Assignment Required](screenshots/02-assignment-required.png)
+
+## Licensing Limitation Encountered
+
+Microsoft Entra ID Free does not support group-based application assignments.
 
 As a workaround:
-Test User 1 was assigned directly to the application
-Test User 2 was assigned directly to the application
-Test User 3 remained unassigned
-This still allowed validation of authorization controls.
+
+- Test User 1 was assigned directly
+- Test User 2 was assigned directly
+- Test User 3 remained unassigned
 
 ## Access Validation Testing
-Test 1 - Authorized User Access 
-Expected Result 
-Assigned users should be able to access the Zoom application through the My Apps portal 
-Actual Result 
-Pass 
-Test User 2 successfully authenticated and the Zoom application was visble 
 
-Test 2 Unauthorized User Access 
-Expected Result 
-Unassigned user should not see the Zoom application 
-Actual Result 
-Pass 
-Test User 2 was unable to view the application due to the lack of assignment 
+### Test 1 – Authorized User Access
 
-##Screenshots 
+**Expected Result:**
+Assigned users should see the Zoom application.
+
+**Actual Result:**
+PASS
+
+Test User 1 successfully authenticated and accessed the application.
+
+![Authorized User](screenshots/03-user1-access-granted.png)
+
+### Test 2 – Unauthorized User Access
+
+**Expected Result:**
+Unassigned users should not see the application.
+
+**Actual Result:**
+PASS
+
+Test User 3 could not view the Zoom application.
+
+![Unauthorized User](screenshots/04-user3-access-denied.png)
+
+## Sign-In Log Review
+
+After access testing, Entra sign-in logs were reviewed to validate authentication activity.
+
+![Sign-In Logs](screenshots/05-sign-in-logs.png)
+
+## IAM Concepts Demonstrated
+
+- Authentication
+- Authorization
+- Least Privilege
+- Enterprise Application Administration
+- SaaS Access Management
+- User Assignment Enforcement
+
+## Lessons Learned
+
+- Enterprise applications can be centrally managed through Entra ID.
+- Authorization controls can be enforced through application assignments.
+- Least privilege reduces unnecessary access.
+- Sign-in logs provide visibility into authentication events.
+
+## Skills Demonstrated
+
+- Microsoft Entra ID Administration
+- IAM
+- Access Control
+- SaaS Governance
+- Identity Security

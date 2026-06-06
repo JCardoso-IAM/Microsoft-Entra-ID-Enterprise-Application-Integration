@@ -44,3 +44,20 @@ Test User 1 was assigned directly to the application
 Test User 2 was assigned directly to the application
 Test User 3 remained unassigned
 This still allowed validation of authorization controls.
+
+## Access Validation Testing
+Test 1 - Authorized User Access 
+Expected Result 
+Assigned users should be able to access the Zoom application through the My Apps portal 
+Actual Result 
+Pass 
+Test User 2 successfully authenticated and the Zoom application was visble 
+
+Test 2 Unauthorized User Access 
+Expected Result 
+Unassigned user should not see the Zoom application 
+Actual Result 
+Pass 
+Test User 2 was unable to view the application due to the lack of assignment 
+
+##Screenshots 
